@@ -1,5 +1,5 @@
 using System.Reflection;
-using System.Runtime.CompilerServices;
+using System.Resources; // Required for the fix
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
@@ -21,6 +21,10 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("2A4B64B9-2019-44E8-8093-8589745F997B")]
+
+// ** THIS IS THE FIX **
+// This line tells the application that all resources are in the main file.
+[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]
 
 // Version information for an assembly consists of the following four values:
 //
